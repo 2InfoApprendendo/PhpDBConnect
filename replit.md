@@ -2,30 +2,37 @@
 
 ## Overview
 
-This repository appears to be empty or the contents were not provided for analysis. This template replit.md file has been created to establish the proper structure for documenting the system architecture and user preferences once the codebase is available.
+This is a PHP project starting with a Hello World page and expanding to include external database connectivity. The project demonstrates basic PHP functionality and database integration patterns.
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Language: Portuguese (Brasil)
 
 ## System Architecture
 
-*Architecture details will be documented here once the repository contents are available for analysis. This section will cover:*
-
-- **Frontend Architecture**: Component structure, state management, and UI frameworks
-- **Backend Architecture**: Server structure, routing, and business logic organization  
-- **Data Layer**: Database design, models, and data access patterns
-- **Authentication**: User authentication and authorization mechanisms
-- **API Design**: REST/GraphQL endpoints and communication patterns
+- **Frontend Architecture**: Simple PHP pages with embedded HTML and CSS
+- **Backend Architecture**: PHP 8.4 with built-in development server on port 5000
+- **Data Layer**: PDO-based database abstraction supporting external databases (MySQL, PostgreSQL, SQLite)
+- **Configuration**: Centralized database configuration with security practices
+- **File Structure**:
+  - `index.php` - Main Hello World page
+  - `config.php` - Database configuration and connection management
+  - `database_demo.php` - Interactive demo showing database connectivity
+  - `database_examples.php` - Code examples for different database types
 
 ## External Dependencies
 
-*External integrations and dependencies will be documented here once the repository is analyzed. This will include:*
+- **Database Systems**: Support for external MySQL, PostgreSQL, and SQLite databases
+- **Development Tools**: PHP 8.4 built-in development server
+- **Runtime Dependencies**: 
+  - PHP PDO extension for database connectivity
+  - Built-in PHP extensions for MySQL, PostgreSQL, and SQLite support
 
-- **Third-party APIs**: External services and their integration patterns
-- **Database Systems**: Primary and secondary data storage solutions
-- **Authentication Services**: External auth providers or custom implementations
-- **Development Tools**: Build tools, testing frameworks, and deployment services
-- **Runtime Dependencies**: Core libraries and frameworks required for operation
+## Recent Changes (August 12, 2025)
 
-*Note: This documentation will be updated once repository contents are provided for proper analysis.*
+- ✅ Created PHP Hello World page with server info display
+- ✅ Added external database connectivity examples  
+- ✅ Implemented secure database configuration system
+- ✅ Created interactive database demo page
+- ✅ Added support for MySQL, PostgreSQL, and SQLite connections
