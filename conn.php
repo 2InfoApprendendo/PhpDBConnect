@@ -1,8 +1,8 @@
 <?php
   class Database {
-    private $host = "db";
-    private $db_name = "test_db";
-    private $username = "root";
+    private $host = "db"; //Servidor Local
+    private $db_name = "test_db"; //Banco da aplicação
+    private $username = "root";  //Usuário do banco
     private $password = "root";
 
     public $conn;
