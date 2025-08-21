@@ -17,19 +17,20 @@ Language: Portuguese (Brasil)
 - **Configuration**: Centralized database configuration with security practices
 - **File Structure**:
   - `index.php` - Main Hello World page
-  - `config.php` - Secure database configuration using environment variables
+  - `config.php` - Secure database configuration supporting DATABASE_URL and individual credentials
   - `database_demo.php` - Interactive demo showing database connectivity
   - `database_examples.php` - Code examples for different database types
   - `planetscale.php` - Specialized page for PlanetScale MySQL connection
+  - `neon.php` - Specialized page for Neon PostgreSQL connection with DATABASE_URL
 
 ## External Dependencies
 
-- **Database Systems**: Primary support for PlanetScale MySQL, also supports PostgreSQL and SQLite
+- **Database Systems**: Primary support for Neon PostgreSQL (using DATABASE_URL), also supports PlanetScale MySQL and SQLite
 - **Development Tools**: PHP 8.4 built-in development server
 - **Runtime Dependencies**: 
-  - PHP PDO extension with MySQL SSL support for PlanetScale
+  - PHP PDO extension with PostgreSQL SSL support for Neon
   - Built-in PHP extensions for MySQL, PostgreSQL, and SQLite support
-- **Security**: Environment variables (Replit Secrets) for credential management
+- **Security**: Environment variables (Replit Secrets) for credential management, DATABASE_URL parsing
 
 ## Recent Changes (August 21, 2025)
 
@@ -37,5 +38,6 @@ Language: Portuguese (Brasil)
 - ✅ Added external database connectivity examples  
 - ✅ Implemented secure database configuration using Replit Secrets
 - ✅ Created specialized PlanetScale connection page with SSL support
-- ✅ Added comprehensive status checking and error reporting
-- ✅ Configured MySQL PDO options for PlanetScale compatibility
+- ✅ Migrated to Neon PostgreSQL with DATABASE_URL support
+- ✅ Added DATABASE_URL parsing and fallback to individual credentials
+- ✅ Created comprehensive Neon-specific interface with PostgreSQL examples
