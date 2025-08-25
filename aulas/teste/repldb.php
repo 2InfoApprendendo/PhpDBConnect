@@ -4,32 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste ReplDB - Banco Chave-Valor do Replit</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <style>
-        .form-group { margin: 15px 0; }
-        .form-group input, .form-group textarea { 
-            width: 100%; 
-            padding: 8px; 
-            border: 1px solid #ddd; 
-            border-radius: 4px;
-        }
-        .btn { 
-            background: #007bff; 
-            color: white; 
-            padding: 10px 20px; 
-            border: none; 
-            border-radius: 4px; 
-            cursor: pointer;
-            margin-right: 10px;
-        }
-        .btn:hover { background: #0056b3; }
-        .result { 
-            margin: 15px 0; 
-            padding: 10px; 
-            border-left: 4px solid #007bff; 
-            background: #f8f9fa;
-        }
-    </style>
+    <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
     <div class="container">

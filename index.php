@@ -9,12 +9,12 @@
 <body>
     <div class="container">
         <h1>Bem-vindo às Aulas!</h1>
-        <p>Escolha o tipo de conexão:</p>
+        <p>🗄️ Escolha o tipo de conexão:</p>
         <div class="links">
-            <a href="repldb.php">🗄️ ReplDB - Banco Chave-Valor</a>
             <a href="aulas/teste/local.php">Conexão Local</a>
             <a href="aulas/teste/remoto.php">Conexão Remota</a>
             <a href="aulas/senha_hash.php">Verificação de Senha com Hash</a>
+            <a href="aulas/teste/repldb.php">ReplDB - Banco Chave-Valor</a>
         </div>
     </div>
 </body>
