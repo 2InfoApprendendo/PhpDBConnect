@@ -134,7 +134,7 @@
         $message = '';
 
         // Processa formulários
-        if ($_POST['action'] == 'set') {
+        if (isset($_POST['action']) && $_POST['action'] == 'set') {
             $key = $_POST['key'];
             $value = $_POST['value'];
             if ($db->set($key, $value)) {
@@ -142,7 +142,7 @@
             } else {
                 $message = "<div class='error'>❌ Erro ao salvar a chave '$key'</div>";
             }
-        } elseif ($_POST['action'] == 'get') {
+        } elseif (isset($_POST['action']) && $_POST['action'] == 'get') {
             $key = $_POST['get_key'];
             $value = $db->get($key);
             if ($value !== null) {
@@ -150,7 +150,7 @@
             } else {
                 $message = "<div class='error'>❌ Chave '$key' não encontrada</div>";
             }
-        } elseif ($_POST['action'] == 'delete') {
+        } elseif (isset($_POST['action']) && $_POST['action'] == 'delete') {
             $key = $_POST['delete_key'];
             if ($db->delete($key)) {
                 $message = "<div class='success'>✅ Chave '$key' removida com sucesso!</div>";
