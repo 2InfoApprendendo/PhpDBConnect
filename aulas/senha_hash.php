@@ -13,7 +13,7 @@
           echo "<p>Criando hash de senha com salt e testando:</p>";
 
           $senha = '123';
-          $senhaInformada = '012';
+          $senhaInformada = '123';
 
           $hashSenha = password_hash($senha, PASSWORD_DEFAULT);
           
