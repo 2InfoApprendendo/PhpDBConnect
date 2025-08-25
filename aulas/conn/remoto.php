@@ -60,7 +60,14 @@ class DatabaseConfig {
             if (!empty($databaseUrl)) {
                 $parsed = self::parseDatabaseUrl($databaseUrl);
 
-                $dsn = "pgsql:host={$parsed['host']};port={$parsed['port']};dbname={$parsed['dbname']};sslmode=require";
+                // Detecta se é conexão interna ou externa
+                $sslMode = (strpos($parsed['host'], 'helium') !== false || 
+                           strpos($parsed['host'], 'localhost') !== false || 
+                           strpos($parsed['host'], '127.0.0.1') !== false) 
+                    ? 'disable'  // Replit interno
+                    : 'require'; // Externo (Neon)
+                
+                $dsn = "pgsql:host={$parsed['host']};port={$parsed['port']};dbname={$parsed['dbname']};sslmode=$sslMode";
 
                 $options = [
                     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -100,7 +107,12 @@ class DatabaseConfig {
                     break;
 
                 case 'pgsql':
-                    $dsn = "pgsql:host=$host;port=$port;dbname=$name;sslmode=require";
+                    // Detecta se é uma conexão externa (Neon) ou interna (Replit)
+                    $sslMode = (strpos($host, 'helium') !== false || strpos($host, 'localhost') !== false || strpos($host, '127.0.0.1') !== false) 
+                        ? 'disable'  // Servidor interno do Replit não suporta SSL
+                        : 'require'; // Servidores externos (Neon) exigem SSL
+                    
+                    $dsn = "pgsql:host=$host;port=$port;dbname=$name;sslmode=$sslMode";
                     $options = [
                         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
