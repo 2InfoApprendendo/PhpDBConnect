@@ -8,11 +8,11 @@
  */
 class Database {
     // Detalhes da conexão
-    private $host;       // Endereço do servidor MySQL (neste caso, localhost)
-    private $dbname; // Nome do banco de dados que você deseja acessar
-    private $username;      // Nome de usuário para autenticação no banco de dados
-    private $password;        // Senha do usuário para autenticação
-    private $pdo;           // Objeto PDO para a conexão
+    private $host;        // Endereço do servidor MySQL (neste caso, localhost)
+    private $dbname;      // Nome do banco de dados que você deseja acessar
+    private $username;    // Nome de usuário para autenticação no banco de dados
+    private $password;    // Senha do usuário para autenticação
+    private $pdo;         // Objeto PDO para a conexão
     private $connected = false; // Flag para indicar se a conexão foi estabelecida
 
     public function __construct($host, $dbname, $username, $password) {
